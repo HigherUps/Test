@@ -1,20 +1,31 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <meta html-equiv="Refresh" content="5" src="https://www.google.com">
+    <meta http-equiv="Refresh" content="5; url='https://www.google.com'">
     <title>Redirecting...</title>
+    <script type="text/javascript">
+    var timeleft = 5;
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("countdowntimer").textContent = timeleft;
+    if(timeleft <= 0)
+        clearInterval(downloadTimer);
+    },1000);
+</script>
   </head>
   <body>
     <h1 style="font-family: Impact;">
-       Redirecting you in 5 seconds to 
+       Redirecting you in <span id="countdowntimer">5</span> seconds to
     </h1>
     <h2 style="font-family: Impact;">
       www.google.com
     </h2>
+    <br>
+    <p style="font-family: Impact; font-size:15px">If you do not redirect click <a href="https://www.google.com">HERE</a></p>
   </body>
 </html>
 <!-- COPYRIGHT INFORMATION -->
-<div>
+<div hidden="true">
 TheHigherUps &copy Classifed
 www.thehigherups.org
 classified@thehigherups.org
@@ -22,5 +33,3 @@ Do Not Distribute - For Legal Information Contact support@thehigherups.org
 We Are Always Watching -- TheHigherUps
 </div>
 <!-- END COPYRIGHT INFORMATION -->
-
-    
